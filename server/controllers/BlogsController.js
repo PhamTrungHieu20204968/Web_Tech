@@ -26,7 +26,7 @@ class BlogsController {
   async createBlog(req, res) {
     const { title, content, image, audio, userId } = req.body;
     try {
-      const blog = await blogs.create();
+      const blog = await blogs.create({ title, content, image, audio, userId });
       res.json(blog);
     } catch (error) {
       console.log(error);

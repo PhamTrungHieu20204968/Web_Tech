@@ -5,7 +5,13 @@ class CommentsController {
   async createComment(req, res) {
     const { content, parent, edited, userId, blogId } = req.body;
     try {
-      const comment = await comments.create();
+      const comment = await comments.create({
+        content,
+        parent,
+        edited,
+        userId,
+        blogId,
+      });
       res.json(comment);
     } catch (error) {
       console.log(error);
