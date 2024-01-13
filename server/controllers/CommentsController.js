@@ -3,7 +3,8 @@ const { blogs, comments } = require("../models");
 class CommentsController {
   // [POST] /
   async createComment(req, res) {
-    const { content, parent, edited, userId, blogId } = req.body;
+    const userId = req.user.id;
+    const { content, parent, edited, blogId } = req.body;
     try {
       const comment = await comments.create({
         content,

@@ -24,7 +24,8 @@ class BlogsController {
 
   // [POST] /
   async createBlog(req, res) {
-    const { title, content, image, audio, userId } = req.body;
+    const userId = req.user.id;
+    const { title, content, image, audio } = req.body;
     try {
       const blog = await blogs.create({ title, content, image, audio, userId });
       res.json(blog);
@@ -32,6 +33,11 @@ class BlogsController {
       console.log(error);
       res.json("Loi DB");
     }
+  }
+
+  // [POST] /
+  async upload(req, res) {
+    res.json("Upload thành công");
   }
 }
 
