@@ -14,6 +14,8 @@ router.get("/login/success", usersController.googleLoginSuccess);
 
 router.get("/login/failed", usersController.googleLoginFailed);
 
+router.get("/logout", usersController.logout);
+
 router.get(
   "/google/callback",
   passport.authenticate("google", {

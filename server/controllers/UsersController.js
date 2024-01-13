@@ -78,6 +78,8 @@ class UsersController {
         //   { expiresIn: "4h" }
       );
       return res.status(200).json({
+        name: _user.name,
+        avatar: _user.avatar,
         role: _user.role,
         accessToken,
       });

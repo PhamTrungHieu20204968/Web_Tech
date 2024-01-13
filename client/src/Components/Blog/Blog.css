@@ -1,0 +1,90 @@
+.blog {
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  padding: 1rem;
+  .name-avatar {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    img {
+      border-radius: 50%;
+      width: 3rem;
+      height: 3rem;
+    }
+    .name {
+      font-size: 1.5rem;
+    }
+  }
+  .blog-title {
+    margin-top: 1rem;
+    font-size: 2.5rem;
+  }
+  .attachment {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    img {
+      max-height: 600px;
+      width: auto;
+    }
+  }
+  .comment-section {
+    display: flex;
+    justify-content: flex-end;
+    .comment-size {
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+.comments {
+  margin-top: 1rem;
+  padding-top: 2rem 0;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  height: 3rem;
+  width: 100%;
+  img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+  }
+  .comment {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    .comment-body {
+      flex: 1;
+      .comment-username {
+        font-size: 0.8rem;
+        font-weight: bold;
+      }
+    }
+    span {
+      font-size: 1rem;
+      cursor: pointer;
+      margin-right: 1rem;
+      &:hover {
+        color: red;
+      }
+    }
+  }
+}
+.your-comment {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  /* width: 100%; */
+  img {
+    margin: auto;
+    width: 2rem;
+    height: auto;
+    border-radius: 50%;
+  }
+}
